@@ -1,0 +1,6 @@
+.weui-pull-to-refresh__arrow {
+	display: none;
+	
+	-webkit-transform: rotate(180deg) translate3d(0, 0, 0);
+	transform: rotate(180deg) translate3d(0, 0, 0)
+}

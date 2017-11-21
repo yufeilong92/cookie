@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+
+		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<input type="text" id="savecookie" value="保存cookie" />
+		<input type="button" id="save" value="保存" />
+		<input type="button" id="remove" value="删除" />
+		
+	
+		<script src="js/save.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.cookie1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			console.log(getCookie("hot"));
+			$("#save").click(function() {
+				//   	    alert($("#savecookie").val()); 
+
+				save_cookie('hot', $("#savecookie").val(), 365,false);
+
+				console.log(getCookie("hot") + "界面");
+			})
+			$("#remove").click(function() {
+				romeverCookie("hot");
+			})
+	
+		</script>
+	</body>
+
+</html>

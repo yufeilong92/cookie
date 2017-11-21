@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+			<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		 <div>
+		 	最近搜索    <span id="ces" class="1111" style=" text-align: right; color: #09BB07; float: right;" >
+		 		清除所有
+		     	</span>
+	
+		 </div>
+		 	   
+		   <button id="ce" type="button" value="测试">测试</button>
+		   <input type="text" name="" id="inpu" value="" />
+		 <script type="text/javascript">
+		 	var key=0;
+		 	   var co= document.session;
+		 $("#ce").click(function () {
+		 	var a=$("#inpu").val();
+		      var list=	new Array;
+		 	    key++;
+		 		list[key]=a;
+		 		console.log(key)
+		 		alert(list.length);
+		 	
+		 	
+		 	   Session.setAttribute("lists",list)
+		 	   
+		 	});
+		 
+		    var lists=(Array) Session.getAttribute("lists");
+		    console.log(lists.length);
+		 	
+		 </script>
+	</body>
+</html>

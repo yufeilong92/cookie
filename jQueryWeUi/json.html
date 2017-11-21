@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<input type="button" id="list" value="解析json" onclick="getjson()" />
+		<div id="list">
+
+		</div>
+		<script>
+			function getjson() {
+			$.getJSON("json/lawcasepage1.json",function (data) {
+				console.log("解析开始");
+				$.each(data,function (i,item) {
+					console.log("解析开始");
+					console.log(i+"第一个");
+					console.log(item+"第二个");
+			        if (i=="data") {
+			        var listitem=item.list;
+			        console.log(listitem.length+"3");	
+			        $.each(listitem, function(j,jitem) {
+			        	console.log(jitem.caseName);
+			        });
+			        }else if (i=="result") {
+			        	console.log(item.code);
+			        	console.log(item.message);
+			        }
+				});
+			});
+			}
+		</script>
+	</body>
+
+</html>
